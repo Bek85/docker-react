@@ -1,0 +1,15 @@
+services:
+  web:
+  # container name
+    container_name: react-app
+    # build context
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # map port 5173 to port 5173 on the host
+    ports:
+     - "5173:5173"
+    # map the current directory to /app in the container
+    volumes:
+     - /app/node_modules
+     - .:/app
