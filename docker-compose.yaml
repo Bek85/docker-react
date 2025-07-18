@@ -21,4 +21,4 @@ services:
     volumes:
      - /app/node_modules
      - .:/app
-    command: ["yarn", "test"]
+    command: ["yarn", "test", "--watch"]
