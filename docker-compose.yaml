@@ -13,3 +13,12 @@ services:
     volumes:
      - /app/node_modules
      - .:/app
+  tests:
+    container_name: react-app-tests
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+     - /app/node_modules
+     - .:/app
+    command: ["yarn", "test"]
