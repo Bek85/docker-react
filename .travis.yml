@@ -1,12 +1,7 @@
-language: node_js
-node_js:
-  - 20
+sudo: required
 
-script:
-  - yarn build
+services:
+  - docker
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist
+before_install:
+  - docker build -f Dockerfile.dev -t alexnick/docker-react .
