@@ -5,3 +5,6 @@ services:
 
 before_install:
   - docker build -f Dockerfile.dev -t alexnick/docker-react .
+
+script:
+  - docker run alexnick/docker-react yarn vitest

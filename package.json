@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "vitest": "vitest run",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:docker": "vitest --watch --reporter=verbose",
