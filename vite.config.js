@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // If deploying to https://yourname.github.io/repo-name
-const base = '/docker-react/'
+const base = '/'
 
 
 // https://vite.dev/config/
