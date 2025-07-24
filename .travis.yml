@@ -8,3 +8,13 @@ before_install:
 
 script:
   - docker run alexnick/docker-react yarn vitest
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: docker-react
+  env: "Docker-env"
+  bucket: "docker-react-bucket"
+  bucket_path: "docker-react"
+  on:
+    branch: main
